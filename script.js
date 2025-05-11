@@ -49,7 +49,7 @@ function hideAllSections() {
 
 function makeChoice(scene, choice) {
   gameProgress[scene] = choices[scene][choice].text;
-  alert(gameProgress[scene]);
+  updateSummary(); // Update the summary with the new choice
   if (scene === 3) {
     document.getElementById('end-screen').classList.add('active');
   } else {
@@ -61,6 +61,17 @@ function showScene(sceneNumber) {
   hideAllSections();
   const selectedScene = document.getElementById(`scene${sceneNumber}`);
   selectedScene.classList.add('active');
+}
+
+function updateSummary() {
+  let summaryContainer = document.getElementById('summary-container');
+  summaryContainer.innerHTML = ""; // Clear previous summary content
+  let summaryText = "<h3>Your Financial Journey:</h3><ul>";
+  for (let scene in gameProgress) {
+    summaryText += `<li><strong>Scene ${scene}:</strong> ${gameProgress[scene]}</li>`;
+  }
+  summaryText += "</ul>";
+  summaryContainer.innerHTML = summaryText;
 }
 
 function showSummary() {
