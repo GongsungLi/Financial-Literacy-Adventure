@@ -1,69 +1,49 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
+  background-color: #f3f3f3;
 }
 
 header {
-  background-color: #3498db;
-  color: white;
-  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
-nav ul li {
-  margin-right: 20px;
+nav li {
+  margin: 0 15px;
 }
 
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-}
-
-#game-container {
-  padding: 20px;
 }
 
 .scene {
   display: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  padding: 20px;
+  text-align: center;
 }
 
 .scene.active {
   display: block;
-  opacity: 1;
 }
 
-button.choice {
-  background-color: #2ecc71;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-top: 20px;
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-button.choice:hover {
-  background-color: #27ae60;
 }
 
 ul {
-  font-size: 16px;
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
+  list-style-type: none;
 }

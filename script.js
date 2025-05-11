@@ -45,10 +45,8 @@ function makeChoice(scene, option) {
   gameProgress[`Scene ${scene}`] = selected.text;
 
   if (!selected.correct) {
-    // Wrong choice ends the game immediately
-    showEndScreen(`You made a poor financial choice in Scene ${scene}. Game Over.`);
+    showEndScreen(`You made a poor financial choice in Scene ${scene}.`);
   } else {
-    // If correct, proceed or finish
     if (scene === 3) {
       showEndScreen("You completed the adventure! Here's how you did:");
     } else {
