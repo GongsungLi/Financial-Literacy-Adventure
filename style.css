@@ -1,3 +1,4 @@
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,28 +6,40 @@ body {
   background-color: #f3f3f3;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
+/* Navbar styles */
+.navbar-custom {
+  background-color: #004466;
   padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav ul {
+.navbar-custom ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  list-style-type: none;
-  padding: 0;
 }
 
-nav li {
-  margin: 0 15px;
+.navbar-custom li {
+  margin: 0 20px;
 }
 
-nav a {
+.navbar-custom a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
+.navbar-custom a:hover {
+  text-decoration: underline;
+}
+
+/* Scene styling */
 .scene {
   display: none;
   padding: 20px;
@@ -37,6 +50,7 @@ nav a {
   display: block;
 }
 
+/* Button styling */
 button {
   margin: 10px;
   padding: 10px 20px;
@@ -44,6 +58,12 @@ button {
   cursor: pointer;
 }
 
+/* List styling in resources and summary */
 ul {
   list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
 }
