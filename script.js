@@ -65,8 +65,4 @@ function showScene(sceneNumber) {
 
 function showSummary() {
   let summaryText = "Your choices:\n";
-  for (let scene in gameProgress) {
-    summaryText += `${gameProgress[scene]}\n`;
-  }
-  alert(summaryText);
-}
+  for (let scene in gameProgress)
