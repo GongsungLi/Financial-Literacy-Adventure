@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Financial Literacy Adventure</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -21,77 +21,56 @@
     <!-- Start Screen -->
     <section id="start-screen" class="scene active">
       <h2>Welcome to the Financial Literacy Adventure</h2>
-      <p>Learn about budgeting, saving, investing, and credit by making decisions in this interactive game!</p>
-      <button class="choice" onclick="startGame()">Start Game</button>
+      <p>Learn key financial skills by making smart choices!</p>
+      <button onclick="startGame()">Start Game</button>
     </section>
 
     <!-- Scene 1: Budgeting -->
     <section id="scene1" class="scene">
       <h2>Scene 1: Budgeting</h2>
-      <p>You receive your first paycheck of $1,000. What will you do with it?</p>
-      <ul>
-        <li>Understanding income and expenses: You have $500 in essential expenses, and you have $500 remaining.</li>
-        <li>Types of budgets: You could use the 50/30/20 rule, which suggests 50% of your income should go to needs, 30% to wants, and 20% to savings.</li>
-        <li>Tracking spending: It's important to track your spending so you can adjust if you're overspending in certain categories.</li>
-      </ul>
-      <button class="choice" onclick="makeChoice(1, '50/30/20 rule')">Follow the 50/30/20 rule</button>
-      <button class="choice" onclick="makeChoice(1, 'Zero-based budget')">Stick to a Zero-based budget</button>
-      <button class="choice" onclick="makeChoice(1, 'Save 20%')">Save 20% and spend the rest</button>
+      <p>You receive $1000. How do you plan your budget?</p>
+      <button onclick="makeChoice(1, '50/30/20')">Use the 50/30/20 rule</button>
+      <button onclick="makeChoice(1, 'SpendAll')">Spend all the money on wants</button>
     </section>
 
-    <!-- Scene 2: Saving and Investing -->
+    <!-- Scene 2: Saving -->
     <section id="scene2" class="scene">
-      <h2>Scene 2: Saving and Investing</h2>
-      <p>You have some extra cash after budgeting. How will you manage it?</p>
-      <ul>
-        <li>Importance of saving: It's crucial to have an emergency fund to cover unexpected expenses like medical bills or car repairs.</li>
-        <li>Types of savings accounts: A high-yield savings account offers a better interest rate than a regular savings account, helping your money grow faster.</li>
-        <li>Introduction to investments: Stocks offer potential high returns but come with risk. Bonds are lower risk but typically offer lower returns.</li>
-      </ul>
-      <button class="choice" onclick="makeChoice(2, 'Emergency Fund')">Open a high-yield savings account for an emergency fund</button>
-      <button class="choice" onclick="makeChoice(2, 'Invest')">Invest in stocks for potential growth</button>
-      <button class="choice" onclick="makeChoice(2, 'Retirement')">Open a retirement account (401(k) or IRA)</button>
+      <h2>Scene 2: Saving</h2>
+      <p>You have $200 left. What do you do with it?</p>
+      <button onclick="makeChoice(2, 'SaveEmergency')">Put it into an emergency fund</button>
+      <button onclick="makeChoice(2, 'SpendShoes')">Buy expensive shoes</button>
     </section>
 
     <!-- Scene 3: Credit -->
     <section id="scene3" class="scene">
       <h2>Scene 3: Credit</h2>
-      <p>You applied for a credit card, and it has a $300 limit. What will you do?</p>
-      <ul>
-        <li>What is credit?: Credit allows you to borrow money and pay it back later, usually with interest.</li>
-        <li>Types of credit: A credit card is a revolving type of credit where you borrow money up to a limit and pay it back later, while a mortgage is for buying a home.</li>
-        <li>Building and maintaining good credit: To maintain a good credit score, it's essential to make payments on time and keep your credit utilization low (use less than 30% of your available credit).</li>
-      </ul>
-      <button class="choice" onclick="makeChoice(3, 'Accept and Use Responsibly')">Accept and use responsibly (pay off balance in full)</button>
-      <button class="choice" onclick="makeChoice(3, 'Decline')">Decline the offer and avoid credit cards</button>
-      <button class="choice" onclick="makeChoice(3, 'Use Irresponsibly')">Accept and max out the card, paying only the minimum balance</button>
+      <p>You get a credit card with a $300 limit. What do you do?</p>
+      <button onclick="makeChoice(3, 'UseResponsibly')">Use it and pay off the full balance monthly</button>
+      <button onclick="makeChoice(3, 'MaxOut')">Max it out and only pay the minimum</button>
     </section>
 
     <!-- End Screen -->
     <section id="end-screen" class="scene">
-      <h2>End Screen</h2>
-      <p>Click below to see a summary of your choices and tips.</p>
-      <div id="summary-container"></div> <!-- Container for the choices summary -->
-      <button id="restart-btn" onclick="restartGame()">Restart Game</button>
+      <h2>Game Over</h2>
+      <div id="summary-container"></div>
+      <button onclick="restartGame()">Restart Game</button>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="scene">
       <h2>About</h2>
-      <p>This game was designed to help high school students learn about financial literacy, including budgeting, saving, investing, and credit management.</p>
-      <button class="choice" onclick="showHome()">Back to Home</button>
+      <p>This game teaches financial literacy to high school students.</p>
+      <button onclick="showHome()">Back</button>
     </section>
 
-    <!-- Resources Section -->
+    <!-- Resources -->
     <section id="resources" class="scene">
       <h2>Resources</h2>
-      <p>Here are some helpful resources to learn more about financial literacy:</p>
       <ul>
         <li><a href="https://www.investopedia.com/">Investopedia</a></li>
         <li><a href="https://www.mint.com/">Mint</a></li>
-        <li><a href="https://www.consumerfinance.gov/consumer-tools/educator-tools/financial-education-curriculum/">CFPB Financial Education</a></li>
       </ul>
-      <button class="choice" onclick="showHome()">Back to Home</button>
+      <button onclick="showHome()">Back</button>
     </section>
   </main>
 
