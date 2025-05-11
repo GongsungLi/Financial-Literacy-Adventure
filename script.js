@@ -1,21 +1,19 @@
-// JavaScript Function #1
-function chooseOption(option) {
-  let message = "";
+// script.js
 
-  if (option === "save") {
-    message = "Great! You’ve built an emergency fund and reduced stress.";
-  } else if (option === "spend") {
-    message = "Oops! Now you're short when unexpected expenses hit.";
-  } else if (option === "invest") {
-    message = "Smart! Investing early helps grow your money over time.";
-  }
+document.getElementById('start-btn').addEventListener('click', () => {
+  switchScene('start-screen', 'scene-budgeting');
+});
 
-  // JavaScript Function #2
-  updateResult(message);
-}
+const optionButtons = document.querySelectorAll('.option');
+optionButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const currentScene = btn.closest('.scene').id;
+    const nextScene = btn.getAttribute('data-next');
+    switchScene(currentScene, nextScene);
+  });
+});
 
-// JavaScript Function #3
-function updateResult(text) {
-  const result = document.getElementById("result");
-  result.textContent = text;
+function switchScene(currentId, nextId) {
+  document.getElementById(currentId).classList.remove('active');
+  document.getElementById(nextId).classList.add('active');
 }
