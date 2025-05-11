@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef6f9;
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+}
+
+/* CSS Class #1: .container */
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* CSS Class #2: .title */
+.title {
+  color: #005f73;
+  margin-bottom: 20px;
+}
+
+/* CSS Class #3: .choice-btn */
+.choice-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #0a9396;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.choice-btn:hover {
+  background-color: #007f80;
+}
+
+/* Additional for result text */
+.result-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #001219;
+}
