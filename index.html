@@ -17,30 +17,32 @@
 
   <main>
     <section id="start-screen" class="scene active">
-      <h1>Welcome to Life After High School</h1>
-      <p>Make the right choices around money and build your future!</p>
+      <h1>Welcome to the Financial Literacy Game</h1>
       <button id="start-btn" class="btn-primary">Start Game</button>
     </section>
 
     <section id="scene-budgeting" class="scene">
       <h2>Scene 1: Budgeting</h2>
       <p>You just got your first job. How do you handle your paycheck?</p>
-      <button class="option" data-next="scene-credit">Create a monthly budget</button>
-      <button class="option" data-next="scene-credit">Spend freely and figure it out later</button>
+      <button class="option" data-next="scene-credit" data-response="Create a monthly budget helps you stay in control of your finances and avoid overspending. Well done!">Create a monthly budget</button>
+      <button class="option" data-next="scene-credit" data-response="Spending freely without a budget can lead to unexpected debt. You might want to reconsider this choice.">Spend freely and figure it out later</button>
+      <p id="response-budgeting" class="response"></p>
     </section>
 
     <section id="scene-credit" class="scene">
       <h2>Scene 2: Understanding Credit</h2>
       <p>You get a credit card offer. What do you do?</p>
-      <button class="option" data-next="scene-saving">Apply and use it responsibly</button>
-      <button class="option" data-next="scene-saving">Max it out on new gear</button>
+      <button class="option" data-next="scene-saving" data-response="Applying for a credit card and using it responsibly can help you build a good credit score. Great choice!">Apply and use it responsibly</button>
+      <button class="option" data-next="scene-saving" data-response="Maxing out your credit card can hurt your credit score and put you in debt. Think carefully before you apply!">Max it out on new gear</button>
+      <p id="response-credit" class="response"></p>
     </section>
 
     <section id="scene-saving" class="scene">
       <h2>Scene 3: Saving</h2>
       <p>You’ve got some extra cash. What’s your move?</p>
-      <button class="option" data-next="start-screen">Save in an emergency fund</button>
-      <button class="option" data-next="start-screen">Blow it on a weekend trip</button>
+      <button class="option" data-next="start-screen" data-response="Saving in an emergency fund is a smart decision. It helps you prepare for unexpected expenses. Well done!">Save in an emergency fund</button>
+      <button class="option" data-next="start-screen" data-response="Spending the cash on a weekend trip might be fun, but it could leave you financially vulnerable in the future. Consider saving for emergencies.">Blow it on a weekend trip</button>
+      <p id="response-saving" class="response"></p>
     </section>
   </main>
 
