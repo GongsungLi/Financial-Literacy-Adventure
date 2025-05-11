@@ -22,24 +22,45 @@ let gameProgress = {
   3: ""
 };
 
-function showScene(sceneNumber) {
-  const allScenes = document.querySelectorAll('.scene');
-  allScenes.forEach(scene => {
-    scene.style.display = 'none';
-  });
+function showHome() {
+  hideAllSections();
+  document.getElementById('start-screen').classList.add('active');
+}
 
-  const selectedScene = document.getElementById(`scene${sceneNumber}`);
-  selectedScene.style.display = 'block';
+function showAbout() {
+  hideAllSections();
+  document.getElementById('about').classList.add('active');
+}
+
+function showResources() {
+  hideAllSections();
+  document.getElementById('resources').classList.add('active');
+}
+
+function startGame() {
+  hideAllSections();
+  document.getElementById('scene1').classList.add('active');
+}
+
+function hideAllSections() {
+  const sections = document.querySelectorAll('.scene');
+  sections.forEach(section => section.classList.remove('active'));
 }
 
 function makeChoice(scene, choice) {
   gameProgress[scene] = choices[scene][choice].text;
   alert(gameProgress[scene]);
   if (scene === 3) {
-    document.getElementById('end-screen').style.display = 'block';
+    document.getElementById('end-screen').classList.add('active');
   } else {
     showScene(scene + 1);
   }
+}
+
+function showScene(sceneNumber) {
+  hideAllSections();
+  const selectedScene = document.getElementById(`scene${sceneNumber}`);
+  selectedScene.classList.add('active');
 }
 
 function showSummary() {

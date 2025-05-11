@@ -10,14 +10,21 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#scene1" onclick="showScene(1)">Budgeting</a></li>
-        <li><a href="#scene2" onclick="showScene(2)">Saving & Investing</a></li>
-        <li><a href="#scene3" onclick="showScene(3)">Credit</a></li>
+        <li><a href="#home" onclick="showHome()">Home</a></li>
+        <li><a href="#about" onclick="showAbout()">About</a></li>
+        <li><a href="#resources" onclick="showResources()">Resources</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="game-container">
+    <!-- Start Screen -->
+    <section id="start-screen">
+      <h2>Welcome to the Financial Literacy Adventure</h2>
+      <p>Learn about budgeting, saving, investing, and credit by making decisions in this interactive game!</p>
+      <button class="choice" onclick="startGame()">Start Game</button>
+    </section>
+
     <!-- Scene 1: Budgeting -->
     <section id="scene1" class="scene">
       <h2>Scene 1: Budgeting</h2>
@@ -65,6 +72,25 @@
       <h2>End Screen</h2>
       <p>Click below to see a summary of your choices and tips.</p>
       <button id="summary-btn" onclick="showSummary()">Summary</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="scene">
+      <h2>About</h2>
+      <p>This game was designed to help high school students learn about financial literacy, including budgeting, saving, investing, and credit management.</p>
+      <button class="choice" onclick="showHome()">Back to Home</button>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="scene">
+      <h2>Resources</h2>
+      <p>Here are some helpful resources to learn more about financial literacy:</p>
+      <ul>
+        <li><a href="https://www.investopedia.com/">Investopedia</a></li>
+        <li><a href="https://www.mint.com/">Mint</a></li>
+        <li><a href="https://www.consumerfinance.gov/consumer-tools/educator-tools/financial-education-curriculum/">CFPB Financial Education</a></li>
+      </ul>
+      <button class="choice" onclick="showHome()">Back to Home</button>
     </section>
 
   </main>

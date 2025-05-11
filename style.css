@@ -34,6 +34,13 @@ nav ul li a {
 
 .scene {
   display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.scene.active {
+  display: block;
+  opacity: 1;
 }
 
 button.choice {
@@ -49,10 +56,6 @@ button.choice {
 
 button.choice:hover {
   background-color: #27ae60;
-}
-
-#end-screen {
-  display: none;
 }
 
 ul {
