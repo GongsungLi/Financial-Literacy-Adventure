@@ -1,6 +1,6 @@
 let choices = {
   1: {
-    '50/30/20': { text: "Used the 50/30/20 rule. Great budgeting!", correct: true },
+    '50/30/20': { text: "Used the 50/30/20 rule. Great budgeting! The 50/30/20 rule suggest you allocate 50% to your needs, 30% to your wants, and 20% to savings", correct: true },
     'SpendAll': { text: "Spent everything. That's not sustainable!", correct: false }
   },
   2: {
